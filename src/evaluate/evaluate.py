@@ -11,7 +11,6 @@ y_test_path = 'data/processed/y_test.csv'
 y_pred_path = 'data/predictions.csv'
 metrics_path = 'metrics/scores.json'
 
-
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
