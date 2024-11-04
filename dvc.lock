@@ -112,10 +112,6 @@ stages:
       hash: md5
       md5: 79fe1854ba9b731266a2cd3bffc635ba
       size: 754
-    - path: src/evaluate/evaluate.py
-      hash: md5
-      md5: afb2f9fb7d2164218f7421c8ffd73c69
-      size: 767
     outs:
     - path: data/predictions.csv
       hash: md5
