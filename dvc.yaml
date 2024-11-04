@@ -34,13 +34,14 @@ stages:
     - models/best_params.pkl
     - src/train/train.py
     outs:
-    - models/best_model.pkl
+    - models/lr_model.pkl
   predict:
     cmd: python src/evaluate/evaluate.py
     deps:
     - data/processed/X_test_scaled.csv
     - data/processed/y_test.csv
-    - models/best_model.pkl
+    - models/lr_model.pkl
+    - src/evaluate/evaluate.py
     outs:
     - data/predictions.csv
     metrics:

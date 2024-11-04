@@ -5,7 +5,7 @@ import json
 from sklearn.linear_model import LinearRegression
 
 
-model_path = 'models/best_model.pkl'
+model_path = 'models/lr_model.pkl'
 X_test_path = 'data/processed/X_test_scaled.csv'
 y_test_path = 'data/processed/y_test.csv'
 y_pred_path = 'data/predictions.csv'

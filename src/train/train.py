@@ -5,7 +5,7 @@ import pickle
 X_train = pd.read_csv('data/processed/X_train_scaled.csv')
 y_train = pd.read_csv('data/processed/y_train.csv')
 best_params_path = 'models/best_params.pkl'
-model_path = 'models/best_model.pkl'
+model_path = 'models/lr_model.pkl'
 
 with open(best_params_path, 'rb') as file:
     params = pickle.load(file)
