@@ -1,13 +1,12 @@
 schema: '2.0'
 stages:
   split:
-    cmd: python src/split/data_split.py
+    cmd: src/split/data_split.py
     deps:
-    - path: data/raw
+    - path: data/raw/raw.csv
       hash: md5
-      md5: 41dee78430cbebe25be9986bbb599d4a.dir
+      md5: 617b56af2992376d5c3e91ad80823898
       size: 333757
-      nfiles: 1
     - path: src/split/data_split.py
       hash: md5
       md5: a148bc260187851ca34baa6203ae6f6b
