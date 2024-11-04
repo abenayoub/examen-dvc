@@ -1,16 +1,16 @@
 schema: '2.0'
 stages:
   split:
-    cmd: src/split/data_split.py
+    cmd: python src/split/data_split.py
     deps:
-    - path: data/raw/raw.csv
+    - path: https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv
       hash: md5
-      md5: 617b56af2992376d5c3e91ad80823898
+      checksum: '"617b56af2992376d5c3e91ad80823898"'
       size: 333757
     - path: src/split/data_split.py
       hash: md5
-      md5: a148bc260187851ca34baa6203ae6f6b
-      size: 500
+      md5: 428911bfef4464ace094f2dfce98e9f3
+      size: 714
     outs:
     - path: data/processed/X_test.csv
       hash: md5
@@ -120,3 +120,16 @@ stages:
       hash: md5
       md5: 431d29b207050e9f9003cf35b53873a9
       size: 54
+  download_data:
+    cmd: wget https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv
+      -O data/raw_data/raw.csv
+    deps:
+    - path: https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv
+      hash: md5
+      checksum: '"617b56af2992376d5c3e91ad80823898"'
+      size: 333757
+    outs:
+    - path: data/raw_data/raw.csv
+      hash: md5
+      md5: 617b56af2992376d5c3e91ad80823898
+      size: 333757
