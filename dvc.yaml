@@ -41,8 +41,8 @@ stages:
     - data/processed/X_test_scaled.csv
     - data/processed/y_test.csv
     - models/lr_model.pkl
-    - src/evaluate/evaluate.py
     outs:
     - data/predictions.csv
     metrics:
-    - metrics/scores.json
+    - metrics/scores.json:
+        cache: false
